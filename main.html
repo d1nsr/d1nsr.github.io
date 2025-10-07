@@ -14,21 +14,25 @@
         body {
             overflow: hidden;
             background: url(".\\stars.png");
-            height: 100%;
-            width: 100%;
+            /*width: 100%;*/
         }
 
         .layer {
             content: "";
             position: absolute;
+            max-height: 100%;
             height: 100%;
+            width: 602svw;
             display:  flex;
         }
 
         .layer::before, .layer::after {
             content: "";            
+            max-height: 100%;
             height: 100%;
-            width: 7329px;
+            width: 302svw;
+            /*width: 7329px;*/
+            
         }
 
         .lone::before, .lone::after {
