@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tobeans</title>
+    <title>Parallax Starts</title>
     <style>
         * {
             margin: 0;
@@ -22,17 +22,48 @@
             content: "";
             position: absolute;
             height: 100%;
-            --speed: attr(data-speed s);
-            --image-set: image-set(attr(data-image) 1x) ;
             display:  flex;
         }
 
         .layer::before, .layer::after {
-            content: "";
-            background: var(--image-set) bottom / cover no-repeat; 
+            content: "";            
             height: 100%;
             width: 7329px;
-            animation: slide var(--speed) linear infinite;       
+        }
+
+        .lone::before, .lone::after {
+            animation: slide 60s linear infinite;     
+            background: url(".\\stars 1.png") bottom / cover no-repeat; 
+        }
+
+        
+        .ltwo::before, .ltwo::after {
+            animation: slide 40s linear infinite;     
+            background: url(".\\stars 2.png") bottom / cover no-repeat; 
+        }
+
+        
+        .lthree::before, .lthree::after {
+            animation: slide 33s linear infinite;     
+            background: url(".\\stars 3.png") bottom / cover no-repeat; 
+        }
+
+        
+        .lfour::before, .lfour::after {
+            animation: slide 22s linear infinite;     
+            background: url(".\\stars 4.png") bottom / cover no-repeat; 
+        }
+
+        
+        .lfive::before, .lfive::after {
+            animation: slide 15s linear infinite;     
+            background: url(".\\stars 5.png") bottom / cover no-repeat; 
+        }
+
+        
+        .lsix::before, .lsix::after {
+            animation: slide 10s linear infinite;     
+            background: url(".\\stars 6.png") bottom / cover no-repeat; 
         }
 
         @keyframes slide {
@@ -57,12 +88,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="layer" data-speed="60" data-image=".\stars 1.png"></div>
-        <div class="layer" data-speed="40" data-image=".\stars 2.png"></div>
-        <div class="layer" data-speed="33" data-image=".\stars 3.png"></div>
-        <div class="layer" data-speed="22" data-image=".\stars 4.png"></div>
-        <div class="layer" data-speed="15" data-image=".\stars 5.png"></div>
-        <div class="layer" data-speed="10" data-image=".\stars 6.png"></div>
+        <div class="layer lone"></div>
+        <div class="layer ltwo"></div>
+        <div class="layer lthree"></div>
+        <div class="layer lfour"></div>
+        <div class="layer lfive"></div>
+        <div class="layer lsix"></div>
+        
     </div>
     <audio controls autoplay loop id="audio" preload="auto">
         <source src="site.mp3" type="audio/mpeg">
@@ -70,9 +102,7 @@
     </audio>
     <script>
         const audio = document.getElementById('audio');
-        // Set volume to 50%
         audio.volume = 0.25;
-        audio.play();
     </script>
 </body>
 </html>
