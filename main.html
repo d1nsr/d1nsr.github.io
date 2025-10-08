@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Starts</title>
+    <title>Parallax Stars</title>
     <style>
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
 
         body {
@@ -20,76 +21,81 @@
         .layer {
             content: "";
             position: absolute;
-            max-height: 100%;
             height: 100%;
-            width: 602svw;
-            display:  flex;
+            width: 9772px;
+            display: flex;
         }
 
-        .layer::before, .layer::after {
-            content: "";            
-            max-height: 100%;
+        .layer::before,
+        .layer::after {
+            content: "";
             height: 100%;
-            width: 302svw;
+            width: 4886px;
             /*width: 7329px;*/
-            
+
         }
 
-        .lone::before, .lone::after {
-            animation: slide 60s linear infinite;     
-            background: url(".\\stars 1.png") bottom / cover no-repeat; 
+        .lone::before,
+        .lone::after {
+            animation: slide 60s linear infinite;
+            background: url(".\\stars 1.png") bottom / cover no-repeat;
         }
 
-        
-        .ltwo::before, .ltwo::after {
-            animation: slide 40s linear infinite;     
-            background: url(".\\stars 2.png") bottom / cover no-repeat; 
+
+        .ltwo::before,
+        .ltwo::after {
+            animation: slide 40s linear infinite;
+            background: url(".\\stars 2.png") bottom / cover no-repeat;
         }
 
-        
-        .lthree::before, .lthree::after {
-            animation: slide 33s linear infinite;     
-            background: url(".\\stars 3.png") bottom / cover no-repeat; 
+
+        .lthree::before,
+        .lthree::after {
+            animation: slide 33s linear infinite;
+            background: url(".\\stars 3.png") bottom / cover no-repeat;
         }
 
-        
-        .lfour::before, .lfour::after {
-            animation: slide 22s linear infinite;     
-            background: url(".\\stars 4.png") bottom / cover no-repeat; 
+
+        .lfour::before,
+        .lfour::after {
+            animation: slide 22s linear infinite;
+            background: url(".\\stars 4.png") bottom / cover no-repeat;
         }
 
-        
-        .lfive::before, .lfive::after {
-            animation: slide 15s linear infinite;     
-            background: url(".\\stars 5.png") bottom / cover no-repeat; 
+
+        .lfive::before,
+        .lfive::after {
+            animation: slide 15s linear infinite;
+            background: url(".\\stars 5.png") bottom / cover no-repeat;
         }
 
-        
-        .lsix::before, .lsix::after {
-            animation: slide 10s linear infinite;     
-            background: url(".\\stars 6.png") bottom / cover no-repeat; 
+
+        .lsix::before,
+        .lsix::after {
+            animation: slide 10s linear infinite;
+            background: url(".\\stars 6.png") bottom / cover no-repeat;
         }
 
         @keyframes slide {
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-100%);
             }
         }
 
-        audio
-        {
+        audio {
             opacity: 0.1;
         }
-        
-        audio:hover
-        {
+
+        audio:hover {
             opacity: .4;
         }
-</style>
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="layer lone"></div>
@@ -98,7 +104,7 @@
         <div class="layer lfour"></div>
         <div class="layer lfive"></div>
         <div class="layer lsix"></div>
-        
+
     </div>
     <audio controls autoplay loop id="audio" preload="auto">
         <source src="site.mp3" type="audio/mpeg">
@@ -109,4 +115,5 @@
         audio.volume = 0.25;
     </script>
 </body>
+
 </html>
