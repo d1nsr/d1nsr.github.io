@@ -32,59 +32,46 @@
             max-height: 100%;
             height: 100%;
             width: 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
         }
 
         .lone::before,
         .lone::after {
             animation: slide 60s linear infinite;
-            background: url(".\\stars 1.png") bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(".\\stars 1.png");
         }
-
 
         .ltwo::before,
         .ltwo::after {
             animation: slide 40s linear infinite;
-            background: url(".\\stars 2.png") bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(".\\stars 2.png");
         }
-
 
         .lthree::before,
         .lthree::after {
             animation: slide 33s linear infinite;
-            background: url(".\\stars 3.png") bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(".\\stars 3.png");
         }
-
 
         .lfour::before,
         .lfour::after {
             animation: slide 22s linear infinite;
-            background: url(".\\stars 4.png") bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(".\\stars 4.png");
         }
-
 
         .lfive::before,
         .lfive::after {
             animation: slide 15s linear infinite;
-            background: url(".\\stars 5.png")  bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(".\\stars 5.png");
         } 
-
 
         .lsix::before,
         .lsix::after {
             animation: slide 10s linear infinite;
-            background: url(".\\stars 6.png") bottom;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-image: url(".\\stars 6.png");
+
         }
 
         @keyframes slide {
@@ -115,7 +102,6 @@
         <div class="layer lfour"></div>
         <div class="layer lfive"></div>
         <div class="layer lsix"></div>
-
     </div>
     <audio controls autoplay loop id="audio" preload="auto">
         <source src="site.mp3" type="audio/mpeg">
@@ -126,5 +112,4 @@
         audio.volume = 0.25;
     </script>
 </body>
-
 </html>
