@@ -21,59 +21,75 @@
         .layer {
             content: "";
             position: absolute;
-            height: 100%;
-            width: 9772px;
+            max-height: 100svh;
+            height: 100svh;
+            width: 602%;
+            /*width: 9772px;*/
             display: flex;
         }
 
         .layer::before,
         .layer::after {
             content: "";
-            height: 100%;
-            width: 4886px;
-            /*width: 7329px;*/
+            max-height: 100svh;
+            height: 100svh;
+            width: 100%;
+            /* width: 301svw; */
+            /*width: 7329px; width: 4886px;*/
 
         }
 
-        .lone::before,
+        /.lone::before,
         .lone::after {
             animation: slide 60s linear infinite;
-            background: url(".\\stars 1.png") bottom / cover no-repeat;
+            background: url(".\\stars 1.png") bottom;
+            background-size: contain;
+            background-repeat: repeat-x;
         }
 
 
         .ltwo::before,
         .ltwo::after {
             animation: slide 40s linear infinite;
-            background: url(".\\stars 2.png") bottom / cover no-repeat;
+            background: url(".\\stars 2.png") bottom;
+            background-size: contain;
+            background-repeat: repeat-x;
         }
 
 
         .lthree::before,
         .lthree::after {
             animation: slide 33s linear infinite;
-            background: url(".\\stars 3.png") bottom / cover no-repeat;
+            background: url(".\\stars 3.png") bottom;
+            background-size: contain;
+            background-repeat: repeat-x;
         }
 
 
         .lfour::before,
         .lfour::after {
             animation: slide 22s linear infinite;
-            background: url(".\\stars 4.png") bottom / cover no-repeat;
+            background: url(".\\stars 4.png") bottom;
+            background-size: contain;
+            background-repeat: repeat-x;
         }
 
 
         .lfive::before,
         .lfive::after {
             animation: slide 15s linear infinite;
-            background: url(".\\stars 5.png") bottom / cover no-repeat;
-        }
+            background: url(".\\stars 5.png")  bottom;
+            background-size: contain;
+            background-repeat: repeat-x;
+        } 
 
 
         .lsix::before,
         .lsix::after {
             animation: slide 10s linear infinite;
-            background: url(".\\stars 6.png") bottom / cover no-repeat;
+            background: url(".\\stars 6.png") bottom;
+            background-size: contain;
+            background-repeat: repeat-x;
         }
 
         @keyframes slide {
